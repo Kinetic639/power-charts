@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background-color: $color-primary;
+  font-family: "Work Sans", Arial, sans-serif;
+  font-size: $m-size;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+// .page {
+//   height: 100%;
+//   color: $fc-primary;
+//   // height: fit-content;
+//   overflow: hidden;
+// }
+
+// .content-container {
+//   // width: 80%;
+//   margin: 0 auto;
+//   height: 100%;
+//   width: 80%;
+//   max-width: 800px;
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   & > * {
+//     position: relative;
+//     z-index: 3;
+//   }
+// }
+
+// .container {
+//   &-home {
+//     justify-content: center;
+//     justify-content: space-between;
+//     height: 70%;
+//   }
+// }

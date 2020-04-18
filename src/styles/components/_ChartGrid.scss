@@ -1,0 +1,8 @@
+.chart-grid {
+    border: 2px solid $color-secondary;
+    max-width: 450px;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-gap: .1rem;
+    padding: .1rem;
+}

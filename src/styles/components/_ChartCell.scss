@@ -1,0 +1,21 @@
+.chart-cell {
+    font-size: 1.2rem;
+    display: flex;
+    border: 1px solid $color-secondary;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 3px;
+    background-color: $color-secondary;
+    &:hover {
+        cursor: pointer;
+        border-color: red;
+    }
+}
+
+.chart-cell::before {
+    content: "";
+    padding-bottom: 100%;
+    display: inline-block;
+    vertical-align: top;
+  }
