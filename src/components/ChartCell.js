@@ -2,8 +2,8 @@ import React from 'react'
 
 const ChartCell = (props) => {
     return (
-        <div onClick={props.onClick} className='chart-cell'>
-            {props.id}{props.type !== 'pp' ? props.type : null}
+        <div onClick={props.onClick} onMouseOver={props.onMouseOver} onMouseDown={props.onMouseDown} onMouseUp={props.onMouseUp} className='chart-cell'>
+            {props.id}
         </div>
     )
 }
