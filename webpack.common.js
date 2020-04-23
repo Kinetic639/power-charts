@@ -5,7 +5,7 @@ const CSSExtract = new ExtractTextPlugin("styles.css");
 
 module.exports = {
   // entry: "./src/playground/redux-expensify.js",
-  entry: ["./src/App.js"],
+  entry: ["./src/playground/Redux-101.js"],
   output: {
     path: path.join(__dirname, "dist"),
     // publicPath: "/",
@@ -17,7 +17,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "src/index.html",
       favicon: "src/images/favicon.ico",
-      
     }),
   ],
   module: {
