@@ -1,0 +1,10 @@
+.tabelka {
+    display: flex;
+    &-kolumna {
+        display: flex;
+        flex-direction: column;
+        max-width: 70px;
+        font-size: 1.2rem;
+        border: 1px solid green;
+    }
+}
