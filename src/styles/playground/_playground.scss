@@ -1,10 +1,33 @@
 .tabelka {
+  display: flex;
+  &-kolumna {
     display: flex;
-    &-kolumna {
+    flex-direction: column;
+    max-width: 70px;
+    font-size: 1.2rem;
+    border: 1px solid green;
+  }
+}
+
+.legend {
+    &-editor {
         display: flex;
         flex-direction: column;
-        max-width: 70px;
-        font-size: 1.2rem;
-        border: 1px solid green;
+        align-items: center;
+        width: fit-content;
+        padding: 1rem;
+        border: 2px solid green;
     }
+  &-item {
+    width: fit-content;
+    display: flex;
+    padding: 0.5rem;
+
+    &__input {
+      margin-right: 0.5rem;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid green;
+    }
+  }
 }

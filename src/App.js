@@ -5,8 +5,8 @@ import "normalize.css/normalize.css";
 import "./styles/styles.scss";
 import * as serviceWorker from "./serviceWorker";
 import ChartTest from "./playground/ChartTest";
+import LegendEditor from "./components/core/LegendEditor";
 
-
-ReactDOM.render(<ChartTest />, document.getElementById("root"));
+ReactDOM.render(<LegendEditor />, document.getElementById("root"));
 
 serviceWorker.unregister();

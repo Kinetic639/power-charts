@@ -5,7 +5,7 @@ const CSSExtract = new ExtractTextPlugin("styles.css");
 
 module.exports = {
   // entry: "./src/playground/redux-expensify.js",
-  entry: ["./src/App.js"],
+  entry: ["./src/playground/redux-expensify.js"],
   output: {
     path: path.join(__dirname, "dist"),
     // publicPath: "/",
