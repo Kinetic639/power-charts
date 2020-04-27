@@ -1,7 +1,7 @@
 import { createStore, combineReducers } from "redux";
 import uuid from "uuid";
 
-// ADD_EXPENSE
+// ADD_ITEM
 const addLegendItem = ({ description = "", colorCode = "" } = {}) => ({
   type: "ADD_ITEM",
   legendItem: {
@@ -10,13 +10,13 @@ const addLegendItem = ({ description = "", colorCode = "" } = {}) => ({
     colorCode,
   },
 });
-// REMOVE_EXPENSE
+// REMOVE_ITEM
 const removeLegendItem = ({ id } = {}) => ({
   type: "REMOVE_ITEM",
   id,
 });
 
-// EDIT_EXPENSE
+// EDIT_ITEM
 const editLegendItem = (id, updates) => ({
   type: "EDIT_ITEM",
   id,
@@ -28,31 +28,7 @@ const editLegendItem = (id, updates) => ({
 // SET_START_DATE
 // SET_END_DATE
 
-// Expenses Reducer
 
-const legendItemReducerDefaultState = [];
-
-const legendItemReducer = (state = legendItemReducerDefaultState, action) => {
-  switch (action.type) {
-    case "ADD_ITEM":
-      return [...state, action.legendItem];
-    case "REMOVE_ITEM":
-      return state.filter(({ id }) => id !== action.id);
-    case "EDIT_ITEM":
-      return state.map((item) => {
-        if (item.id === action.id) {
-          return {
-            ...item,
-            ...action.updates,
-          };
-        } else {
-          return item;
-        }
-      });
-    default:
-      return state;
-  }
-};
 
 // Store creation
 
