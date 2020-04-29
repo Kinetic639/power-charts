@@ -1,36 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
+import { connect } from "react-redux";
 import LegendItem from "./LegendItem";
 
-export class LegendEditor extends Component {
-  state = {
-    legend: [
-      {
-        id: 1,
-        name: "",
-        colorCode: "",
-      },
-    ],
-  };
-  render() {
-    const handleClick = (e) => {
-      const legendItem = {
-        id: "",
-        name: "",
-        colorCode: "",
-      };
-      legendItem.id = this.state.legend.length + 1;
-     this.setState(prevstate => {
-         
-     })
-      console.log(this.state.legend);
-    };
-    return (
-      <div className="legend-editor">
-       {this.state.legend.map(item => <LegendItem key={item.id} />)}
-        <button onClick={handleClick}>Add new</button>
-      </div>
-    );
-  }
-}
+const LegendEditor = (props) => <div>{props.legendItems.map(item => <LegendItem key={item.id} />)}</div>;
 
-export default LegendEditor;
+const mapStateToProps = (state) => {
+  return {
+    legendItems: state.legendItem,
+  };
+};
+
+export default connect(mapStateToProps)(LegendEditor);

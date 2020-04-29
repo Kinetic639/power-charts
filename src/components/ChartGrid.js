@@ -81,7 +81,7 @@ export class ChartGrid extends Component {
         cellData.row = firstIndex + 1;
         cellData.col = secondIndex + 1;
         grid.push(cellData);
-        console.log(cellData);
+        // console.log(cellData);
       });
     });
 
